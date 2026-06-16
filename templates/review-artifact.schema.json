@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "review-artifact.schema.json",
+  "title": "better-x Review Queue Artifact",
+  "description": "Schema for a single better-x review-queue artifact. One artifact per candidate public action. Matches review-artifact.example.json in the better-x runtime vault seed. The artifact is the durable record a human and an agent both read before anything executes; execution happens only through the guarded action gate, and LIVE actions are a stub by default.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "action_type",
+    "editorial_chain",
+    "relationship_context",
+    "final_text",
+    "checks",
+    "policy",
+    "final_decision",
+    "exact_command"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Stable identifier for this candidate action within the run."
+    },
+    "source_post": {
+      "type": "string",
+      "description": "URL or reference to the source/context post this action responds to. May be empty for original posts."
+    },
+    "target_post": {
+      "type": "string",
+      "description": "The id of the post being acted on (e.g. quoted or replied to). May be empty for original posts."
+    },
+    "action_type": {
+      "type": "string",
+      "description": "The kind of public action requested.",
+      "enum": ["post", "reply", "quote", "repost", "like", "follow"]
+    },
+    "editorial_chain": {
+      "type": "object",
+      "description": "The multi-role draft/review chain so that no single model drafts, approves, and executes its own work.",
+      "additionalProperties": false,
+      "required": [
+        "writer_model",
+        "writer_output",
+        "writer_rationale",
+        "mechanical_reviewer_model",
+        "mechanical_reviewer_output",
+        "editor_model",
+        "editor_output",
+        "editor_rationale",
+        "objections",
+        "final_selection_rationale"
+      ],
+      "properties": {
+        "writer_model": {
+          "type": "string",
+          "description": "Model id of the writer role (e.g. a fast non-reasoning model)."
+        },
+        "writer_output": {
+          "type": "string",
+          "description": "Raw draft produced by the writer."
+        },
+        "writer_rationale": {
+          "type": "string",
+          "description": "Short rationale: why the draft is shaped this way and how it treated source content as untrusted context, not instructions."
+        },
+        "mechanical_reviewer_model": {
+          "type": "string",
+          "description": "Model id of the mechanical reviewer (fast, low-cost)."
+        },
+        "mechanical_reviewer_output": {
+          "type": "string",
+          "description": "Mechanical review result: format/automation-tell findings (lists, templates, capitalization, length)."
+        },
+        "editor_model": {
+          "type": "string",
+          "description": "Model id of the editor / adversarial reviewer (strong reasoning/editorial model)."
+        },
+        "editor_output": {
+          "type": "string",
+          "description": "Edited final text after the editor improved and pressure-tested the draft."
+        },
+        "editor_rationale": {
+          "type": "string",
+          "description": "What the editor changed and why; explicit check of authenticity, reputation, medical/sensitive claims, and private-data leakage."
+        },
+        "objections": {
+          "type": "string",
+          "description": "Remaining objections or residual risk. State 'No blocking objections remain' only when true."
+        },
+        "final_selection_rationale": {
+          "type": "string",
+          "description": "Why the chosen final_text was selected over the alternatives."
+        }
+      }
+    },
+    "relationship_context": {
+      "type": "object",
+      "description": "Who the target is and how to speak to them, derived from the social graph. Replies/quotes must know whether someone is a friend, mentor, advisor, customer, journalist, stranger, or critic.",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "matched_profile",
+        "relationship_classes",
+        "tone_rule",
+        "source_basis",
+        "confidence"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "description": "Resolution status of the relationship lookup.",
+          "enum": ["known", "unknown", "ambiguous"]
+        },
+        "matched_profile": {
+          "type": "string",
+          "description": "Reference to the matched social-graph profile, or empty if none."
+        },
+        "relationship_classes": {
+          "type": "array",
+          "description": "Zero or more relationship classes that apply to the target.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "friend",
+              "mentor",
+              "advisor",
+              "colleague",
+              "customer",
+              "partner",
+              "investor",
+              "journalist",
+              "stranger",
+              "critic"
+            ]
+          }
+        },
+        "tone_rule": {
+          "type": "string",
+          "description": "The tone constraint to apply given the relationship (e.g. 'Write as a thoughtful peer; no assumed familiarity')."
+        },
+        "source_basis": {
+          "type": "array",
+          "description": "What the relationship inference is based on (e.g. x_profile, prior_interactions, social_graph_entry).",
+          "items": { "type": "string" }
+        },
+        "confidence": {
+          "type": "string",
+          "description": "Confidence in the relationship resolution.",
+          "enum": ["high", "medium", "low", "needs_review"]
+        }
+      }
+    },
+    "final_text": {
+      "type": "string",
+      "description": "The exact text that would be published if executed. Must match the text in exact_command."
+    },
+    "operator_approval": {
+      "type": "string",
+      "description": "Reference to the operator's approval for this candidate, or empty when not yet approved."
+    },
+    "checks": {
+      "type": "object",
+      "description": "Per-check results from the review and safety passes. Each check is pass/fail/needs_review.",
+      "additionalProperties": false,
+      "required": [
+        "haiku_review",
+        "sonnet_review",
+        "rule_pass",
+        "untrusted_input_pass",
+        "medical_claims",
+        "reputation",
+        "private_data",
+        "product_link",
+        "capitalization_style",
+        "sentence_structure"
+      ],
+      "properties": {
+        "haiku_review": { "$ref": "#/$defs/checkResult" },
+        "sonnet_review": { "$ref": "#/$defs/checkResult" },
+        "rule_pass": { "$ref": "#/$defs/checkResult" },
+        "untrusted_input_pass": {
+          "$ref": "#/$defs/checkResult",
+          "description": "Confirms source/fetched content was treated as data, not as instructions (prompt-injection safety)."
+        },
+        "medical_claims": {
+          "$ref": "#/$defs/checkResult",
+          "description": "Confirms no medical advice and no implication of autonomous diagnosis/prescription."
+        },
+        "reputation": { "$ref": "#/$defs/checkResult" },
+        "private_data": {
+          "$ref": "#/$defs/checkResult",
+          "description": "Confirms no private/personal data leakage."
+        },
+        "product_link": { "$ref": "#/$defs/checkResult" },
+        "capitalization_style": { "$ref": "#/$defs/checkResult" },
+        "sentence_structure": { "$ref": "#/$defs/checkResult" }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "description": "Policy-gate results that govern whether the action is allowed to execute at all.",
+      "additionalProperties": false,
+      "required": [
+        "stop_exception_or_clear",
+        "action_policy_allows",
+        "daily_quota_available",
+        "cadence_window_available"
+      ],
+      "properties": {
+        "stop_exception_or_clear": {
+          "$ref": "#/$defs/checkResult",
+          "description": "STOP is clear, or a valid STOP exception applies."
+        },
+        "action_policy_allows": { "$ref": "#/$defs/checkResult" },
+        "daily_quota_available": { "$ref": "#/$defs/checkResult" },
+        "cadence_window_available": { "$ref": "#/$defs/checkResult" }
+      }
+    },
+    "final_decision": {
+      "type": "string",
+      "description": "The overall disposition of this candidate.",
+      "enum": [
+        "approved_for_execution",
+        "approve_with_notes",
+        "request_revision",
+        "rejected",
+        "blocked"
+      ]
+    },
+    "exact_command": {
+      "type": "array",
+      "description": "The exact argv the guarded action gate would run. The published text element must equal final_text. LIVE execution is a stub by default; the gate dry-runs unless explicitly enabled.",
+      "items": { "type": "string" },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "checkResult": {
+      "type": "string",
+      "enum": ["pass", "fail", "needs_review", "n/a"]
+    }
+  }
+}

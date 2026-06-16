@@ -30,13 +30,13 @@ Read these before better-x work:
 - `vault/02-style-memory/voice-profile.md`
 - `vault/02-style-memory/negative-examples.md`
 - `vault/03-source-graph/watchlist.md`
-- `vault/04-topic-graph/augmented-wellness.md`
+- `vault/04-topic-graph/{{primary-topic}}.md`
 - `vault/06-social-graph/README.md`
 - `vault/06-social-graph/relationship-index.md`
 - `vault/06-social-graph/response-rules.md`
 - `TOOLS.md`
 
-If compiled profile files are missing, run or recommend `scripts/betterx_compile_context.py`.
+If context files are missing or stale, run `scripts/betterx_smoke_check.py` to validate the kit, then `scripts/betterx_radar.py` to assemble the daily context prompt.
 
 ## Hard Boundaries
 

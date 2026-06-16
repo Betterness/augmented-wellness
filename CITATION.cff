@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: "Augmented Wellness (companion repo)"
+message: >-
+  If you reference this show or build on these artifacts, please cite
+  the podcast and link back to the episode page.
+type: software
+abstract: >-
+  The hands-on lab companion to the Augmented Wellness podcast: starter kits,
+  prompts, source maps, claim notes, and agent-readable companion files that
+  pair with each episode. Nothing here is medical advice.
+authors:
+  - name: "Betterness"
+    website: "https://betterness.ai"
+  - given-names: "Demian"
+    family-names: "Bellumio"
+    affiliation: "Betterness"
+repository-code: "https://github.com/Betterness/augmented-wellness"
+url: "https://betterness.ai/augmentedwellness"
+license: MIT
+keywords:
+  - augmented-wellness
+  - podcast
+  - ai-agents
+  - starter-kit
+  - health
+  - wellness
+identifiers:
+  - type: url
+    value: "https://youtu.be/l2tLdSlamIc"
+    description: "Episode 001 — Martin Varsavsky (YouTube)"
+preferred-citation:
+  type: generic
+  title: "Augmented Wellness"
+  authors:
+    - given-names: "Demian"
+      family-names: "Bellumio"
+      affiliation: "Betterness"
+  publisher:
+    name: "Betterness One"
+  year: 2026
+  url: "https://betterness.ai/augmentedwellness"

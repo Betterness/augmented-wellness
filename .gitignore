@@ -1,0 +1,85 @@
+# Augmented Wellness — companion repo .gitignore
+#
+# This repo ships starter kits, prompts, source maps, claim notes, and
+# agent-readable companion files. It must NOT carry secrets, cookies, raw
+# media, social exports, runtime logs, or private vault data.
+#
+# IMPORTANT: this repo intentionally COMMITS blank seed templates and examples
+# (e.g. runtime-vault-seed/, *.example.json, the example .jsonl log). The rules
+# below are written to exclude live/private data while keeping those seeds.
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*~
+.idea/
+.vscode/
+
+# --- Secrets & env ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*token*
+*secret*
+*credential*
+
+# --- Cookies / sessions / browser captures ---
+*cookie*
+*.cookies
+session.json
+sessions/
+*.har
+
+# --- Social platform exports (e.g. X / Twitter archives) ---
+x-export/
+twitter-export/
+*-twitter-archive*
+*-x-archive*
+tweets.js
+
+# --- Logs (ignore live runtime logs, KEEP committed examples) ---
+*.log
+logs/
+*.jsonl
+!*.example.jsonl
+!**/*.example.jsonl
+
+# --- Local databases ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Browser profiles ---
+.openclaw/
+chrome-profile/
+browser-profile/
+profiles/
+
+# --- Generated artifacts / build output ---
+dist/
+build/
+*.zip
+codex-handoffs/
+
+# --- Private vault runtime dirs (KEEP the blank runtime-vault-seed/) ---
+# A live agent run materializes its own private vault. Never commit it.
+runtime-vault/
+.runtime-vault/
+vault-runtime/
+# (runtime-vault-seed/ is the committed BLANK seed — do not ignore it)
+
+# --- Raw media (audio/video is hosted off-repo) ---
+raw/
+raw-media/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.m4a
+
+# --- Python / Node runtime ---
+__pycache__/
+*.pyc
+node_modules/

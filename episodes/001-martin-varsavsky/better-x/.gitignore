@@ -18,3 +18,7 @@ codex-handoffs/
 *secret*
 *cookie*
 *.har
+
+# Runtime decision logs (keep logs/.gitkeep, ignore the rest)
+logs/*.jsonl
+logs/*.json

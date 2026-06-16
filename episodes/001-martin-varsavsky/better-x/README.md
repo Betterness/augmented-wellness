@@ -9,85 +9,63 @@ status: active
 
 # better-x
 
-better-x is a public, forkable X/social autopilot starter kit.
+better-x is a public, forkable **starter kit** for participating in the
+conversation around your chosen topic, in your own voice.
 
-It helps an operator participate in the conversation around their chosen
-topic through their own lens, while learning from their context sources, X,
-and their own edits. Fork it, drop in your own identity, and it becomes your
-social operating system.
+It is a build-log artifact from the show: a working local **observe -> draft ->
+review** prompt flow plus a guarded **dry-run action gate**. Live X posting is a
+**stub** you wire up later — out of the box the kit is offline, autonomy is off,
+and nothing posts. Fork it, drop in your own identity, and run the loop.
 
 Start here:
 
-1. [AGENT_NATIVE_ARCHITECTURE.md](AGENT_NATIVE_ARCHITECTURE.md)
-2. [OPENCLAW_QUICKSTART.md](OPENCLAW_QUICKSTART.md)
-3. [ARCHITECTURE_2026_OPENCLAW.md](ARCHITECTURE_2026_OPENCLAW.md)
-4. [CODEX_QUICKSTART.md](CODEX_QUICKSTART.md)
-5. [X_DEVELOPER_SETUP.md](X_DEVELOPER_SETUP.md)
-6. [COSTS_AND_BUDGETS.md](COSTS_AND_BUDGETS.md)
-7. [PACKAGE_MANIFEST.md](PACKAGE_MANIFEST.md)
-8. [[better-x Starter Vault Spec]]
+1. [QUICKSTART.md](QUICKSTART.md) — run it in observe/draft mode in ~5 minutes.
+2. [SAFETY.md](SAFETY.md) — autonomy-off model, the gate, disclosure, medical policy, STOP.
+3. [CONFIGURATION.md](CONFIGURATION.md) — config fields and the runtime vault layout.
+4. [EXAMPLE_WORKFLOW.md](EXAMPLE_WORKFLOW.md) — one concrete observe -> draft -> review pass.
+5. [FAQ.md](FAQ.md) — the short answers.
+6. [AGENT_NATIVE_ARCHITECTURE.md](AGENT_NATIVE_ARCHITECTURE.md) — the owner-agent-native design.
 
-Reference notes:
+## Try it (offline, no X account)
 
-- [[better-x OpenClaw Prompts]]
-
-## Install
-
-From this repository:
+Copy the seed into a private workspace and run the loop:
 
 ```bash
-python3 scripts/betterx_install.py \
+mkdir -p ~/.openclaw/workspace/programs/betterx
+cp -R runtime-vault-seed/. ~/.openclaw/workspace/programs/betterx/
+cp betterx.config.example.json ~/.openclaw/workspace/programs/betterx/betterx.config.json
+```
+
+Build a drafting prompt, paste it into your own LLM, capture the draft as a
+review artifact, then dry-run the gate:
+
+```bash
+python3 scripts/betterx_radar.py \
+  --workspace ~/.openclaw/workspace/programs/betterx --out radar-prompt.txt
+
+python3 scripts/betterx_action_gate.py \
   --workspace ~/.openclaw/workspace/programs/betterx \
-  --owner-agent main \
-  --model anthropic/claude-haiku-4-5
+  --artifact vault/05-runs/draft-queues/<candidate-review>.json \
+  --action quote \
+  --dry-run
 ```
 
-With X configured:
+Sanity-check the runtime at any time:
 
 ```bash
-python3 scripts/betterx_install.py \
-  --workspace ~/.openclaw/workspace/programs/betterx \
-  --owner-agent main \
-  --x-app betterx-<handle> \
-  --x-account @<handle> \
-  --delivery-channel telegram \
-  --delivery-target <telegram-chat-id>
+python3 scripts/betterx_smoke_check.py \
+  --workspace ~/.openclaw/workspace/programs/betterx
 ```
 
-Validate:
+Full walkthrough in [EXAMPLE_WORKFLOW.md](EXAMPLE_WORKFLOW.md).
 
-```bash
-python3 ~/.openclaw/workspace/programs/betterx/scripts/betterx_smoke_check.py \
-  --workspace ~/.openclaw/workspace/programs/betterx \
-  --check-openclaw
-```
+## What it will NOT do by default
 
-## Codex Mode
-
-To run better-x from a Codex session instead of OpenClaw, use:
-
-```bash
-python3 scripts/betterx_codex_runner.py \
-  --workspace ~/.betterx/runtime \
-  --mode status
-```
-
-See [CODEX_QUICKSTART.md](CODEX_QUICKSTART.md).
-
-## Build Artifact
-
-Create the GitHub/release artifact locally:
-
-```bash
-python3 scripts/build_artifact.py
-```
-
-Outputs:
-
-- `dist/betterx-openclaw-kit.zip`
-- `dist/betterx-openclaw-kit.sha256`
-
-The GitHub workflow `.github/workflows/betterx-artifact.yml` builds the same zip and uploads it as an Actions artifact.
+- **No autonomy** — `autonomy.stop_all_external_actions: true`.
+- **Nothing posts** — `x.read_enabled` and `x.write_enabled` are both `false`,
+  and there's no live X adapter installed.
+- **No medical advice / no autonomous diagnosis or prescription** — see
+  [SAFETY.md](SAFETY.md).
 
 ## Boundary
 
