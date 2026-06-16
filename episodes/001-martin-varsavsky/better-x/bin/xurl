@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+"""BetterX xurl guard.
+
+Put this directory before the real xurl binary in OpenClaw's PATH.
+Read commands pass through. BetterX write commands are blocked unless they are
+executed by scripts/betterx_action_gate.py, which calls the real xurl binary
+directly.
+"""
+
+from __future__ import annotations
+
+import os
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+
+WRITE_VERBS = {
+    "post",
+    "quote",
+    "reply",
+    "follow",
+    "like",
+    "repost",
+    "block",
+    "dm",
+    "delete",
+    "unfollow",
+    "unlike",
+    "unrepost",
+}
+
+OPTIONS_WITH_VALUES = {
+    "--app",
+    "--user",
+    "--bearer-token",
+    "--access-token",
+    "--access-secret",
+    "--consumer-key",
+    "--consumer-secret",
+    "--client-id",
+    "--client-secret",
+    "--redirect-uri",
+    "-n",
+    "--max-results",
+}
+
+
+def real_xurl() -> str:
+    configured = os.environ.get("BETTERX_REAL_XURL_BIN", "").strip()
+    if configured:
+        return configured
+    this = Path(__file__).resolve()
+    for candidate in ("/opt/homebrew/bin/xurl", "/usr/local/bin/xurl"):
+        path = Path(candidate)
+        if path.exists() and path.resolve() != this:
+            return str(path)
+    found = shutil.which("xurl")
+    if found and Path(found).resolve() != this:
+        return found
+    print("betterx xurl guard: real xurl binary not found", file=sys.stderr)
+    return "xurl"
+
+
+def command_verb(argv: list[str]) -> str:
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg in OPTIONS_WITH_VALUES:
+            i += 2
+            continue
+        if arg.startswith("-"):
+            i += 1
+            continue
+        return arg
+    return ""
+
+
+def main() -> int:
+    argv = sys.argv[1:]
+    verb = command_verb(argv)
+    if verb in WRITE_VERBS and os.environ.get("BETTERX_ACTION_GATE_EXECUTION") != "1":
+        print(
+            "Blocked by BetterX: raw xurl write commands must go through "
+            "scripts/betterx_action_gate.py with a validated review artifact.",
+            file=sys.stderr,
+        )
+        return 73
+    proc = subprocess.run([real_xurl()] + argv, text=True, check=False)
+    return proc.returncode
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

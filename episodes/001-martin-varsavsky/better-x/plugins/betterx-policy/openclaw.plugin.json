@@ -1,0 +1,33 @@
+{
+  "id": "betterx-policy",
+  "name": "BetterX Policy Gate",
+  "description": "Blocks raw X write commands unless BetterX action-gate execution is detected.",
+  "contracts": {},
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      },
+      "appAliases": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      },
+      "actionGatePaths": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "runtime_name": "betterx",
+  "owner_agent": "main",
+  "operator_agent": "main",
+  "worker_agent": "",
+  "workspace": "~/.openclaw/workspace/programs/betterx",
+  "model": "anthropic/claude-haiku-4-5",
+  "model_roles": {
+    "candidate_reader": {
+      "primary": "xai/grok-4.20-0309-non-reasoning",
+      "fallback": "anthropic/claude-haiku-4-5",
+      "purpose": "Read platform-native context and identify likely post/reply/quote angles."
+    },
+    "writer": {
+      "primary": "xai/grok-4.20-0309-non-reasoning",
+      "fallback": "anthropic/claude-haiku-4-5",
+      "purpose": "Draft platform-native public text."
+    },
+    "mechanical_reviewer": {
+      "primary": "anthropic/claude-haiku-4-5",
+      "fallback": "openai/gpt-5.4-mini",
+      "purpose": "Fast checks for numbered lists, repeated structures, capitalization, links, length, and automation tells."
+    },
+    "adversarial_reviewer": {
+      "primary": "anthropic/claude-sonnet-4-6",
+      "fallback": "openai/gpt-5.4",
+      "purpose": "Deep critique of voice, authenticity, reputation, claims, private-data leakage, and the operator-specific voice test."
+    },
+    "final_safety": {
+      "primary": "anthropic/claude-sonnet-4-6",
+      "fallback": "openai/gpt-5.4",
+      "purpose": "Final policy, medical, reputation, and action-type gate before execution."
+    }
+  },
+  "timezone": "America/New_York",
+  "delivery": {
+    "channel": "telegram",
+    "target": "",
+    "announce": false
+  },
+  "x": {
+    "adapter": "xurl",
+    "app": "",
+    "account": "",
+    "real_xurl_bin": "",
+    "read_enabled": false,
+    "write_enabled": false
+  },
+  "xai": {
+    "enabled": false,
+    "provider_configured_in_openclaw": false,
+    "preferred_writer_model": "xai/grok-4.20-0309-non-reasoning",
+    "reasoning_writer_model": "xai/grok-4.20-0309-reasoning",
+    "note": "Enable after xAI/Grok auth is configured in OpenClaw. Until then writer falls back to the configured fallback model."
+  },
+  "profile_sources": [
+    {
+      "name": "user_profile",
+      "path": "./vault/01-person",
+      "required": true,
+      "kind": "directory"
+    },
+    {
+      "name": "style_memory",
+      "path": "./vault/02-style-memory",
+      "required": true,
+      "kind": "directory"
+    },
+    {
+      "name": "source_graph",
+      "path": "./vault/03-source-graph",
+      "required": true,
+      "kind": "directory"
+    },
+    {
+      "name": "topic_graph",
+      "path": "./vault/04-topic-graph",
+      "required": true,
+      "kind": "directory"
+    },
+    {
+      "name": "social_graph",
+      "path": "./vault/06-social-graph",
+      "required": true,
+      "kind": "directory"
+    },
+    {
+      "name": "main_agent_memory",
+      "path": "~/.openclaw/workspace/MEMORY.md",
+      "required": false,
+      "kind": "file"
+    },
+    {
+      "name": "main_agent_user",
+      "path": "~/.openclaw/workspace/USER.md",
+      "required": false,
+      "kind": "file"
+    }
+  ],
+  "schedules": {
+    "hourly_radar": {
+      "enabled": true,
+      "every": "1h"
+    },
+    "daily_learning": {
+      "enabled": true,
+      "every": "24h"
+    },
+    "metrics_snapshot": {
+      "enabled": false,
+      "every": "30m",
+      "lookback": "48h",
+      "source": "account timeline",
+      "note": "Track recent account posts in the lookback window, not hardcoded post IDs."
+    },
+    "dreaming": {
+      "enabled": false,
+      "cron": "0 3 * * *"
+    }
+  },
+  "autonomy": {
+    "stop_all_external_actions": true,
+    "allowed_action_exceptions": []
+  }
+}

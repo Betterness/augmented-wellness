@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local/private runtime data
+.env
+.env.*
+*.log
+raw/
+logs/*.tmp
+
+# Generated artifacts
+dist/
+codex-handoffs/
+
+# Never commit credentials or platform exports
+*token*
+*secret*
+*cookie*
+*.har
