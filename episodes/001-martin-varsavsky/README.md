@@ -4,7 +4,7 @@
 
 **Watch / listen:** [YouTube](https://youtu.be/l2tLdSlamIc) · [Apple Podcasts](https://podcasts.apple.com/podcast/id1896935053) · [Spotify](https://open.spotify.com/show/033zAkDQc1NpADnqP4OFzh) · [Amazon Music](https://music.amazon.com/podcasts/d3fcfba2-fded-460f-b818-1937d04d47db/augmented-wellness) · [Episode page](https://betterness.ai/augmentedwellness/001-martin-varsavsky)
 
-Serial founder Martin Varsavsky on building **Certuma** — an AI physician whose *goal* is to pass the FDA, with a doctor kept in the loop (it is not approved today) — raising a seed round with AI as his only co-founder, cycling 14 hours a week at 66, and *"Pedro,"* the disclosed AI agent that posts in his own voice on X, where two models must agree before anything goes out.
+Serial founder Martin Varsavsky on building **Certuma** — an AI physician whose *goal* is to pass the FDA, with a doctor kept in the loop (it is not approved today) — raising a seed round with AI as his only co-founder, cycling 14 hours a week at 66, and *"Pedro,"* the disclosed AI agent that posts in his own voice on X, where two models must agree before anything goes out. Along the way: a hard first 25 years in Argentina and 1970s–80s New York, the bank that rejected him for a job then funded him, real estate as the seed capital he used to escape into tech, and the personal cycling app ("Stravar") he coded to race his own 2010 self. A fuller, transcript-grounded walkthrough lives in [`show-notes.md`](./show-notes.md).
 
 ## The artifact: `better-x`
 
