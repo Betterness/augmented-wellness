@@ -26,6 +26,15 @@ Start here:
 5. [FAQ.md](FAQ.md) — the short answers.
 6. [AGENT_NATIVE_ARCHITECTURE.md](AGENT_NATIVE_ARCHITECTURE.md) — the owner-agent-native design.
 
+## Make it sound like you
+
+The kit can draft in your voice, but only as well as it knows your voice. The
+[persona-builder/](persona-builder/) is a short interview that fills the vault's
+voice and boundary files — the calibration behind the "Pedro" effect Martin
+describes in the episode: a disclosed agent tuned well enough that his wife often
+can't tell who wrote a post. It's adapted, with credit, from the Personal Context
+Portfolio shared on the AI Daily Brief podcast.
+
 ## Try it (offline, no X account)
 
 Copy the seed into a private workspace and run the loop:
