@@ -23,9 +23,11 @@ python3 scripts/betterx_action_gate.py --workspace . --artifact vault/05-runs/dr
 
 Do not run raw `xurl` write commands directly.
 
-## OpenClaw
+## Optional scheduler / agent runtime
 
-Cron jobs should run through OpenClaw:
+If you attach better-x to OpenClaw, Hermes, or another local agent runtime, use
+that runtime to schedule observe/draft/review jobs. Example OpenClaw inspection
+commands:
 
 ```bash
 openclaw cron list

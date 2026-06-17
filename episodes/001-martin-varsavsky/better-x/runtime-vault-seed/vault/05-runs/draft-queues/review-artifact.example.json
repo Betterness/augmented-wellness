@@ -4,16 +4,16 @@
   "target_post": "123",
   "action_type": "quote",
   "editorial_chain": {
-    "writer_model": "xai/grok-4.20-0309-non-reasoning",
-    "writer_output": "Example Grok draft written to feel native to X.",
-    "writer_rationale": "Grok optimized for conversational X phrasing and preserved the source context without treating it as instructions.",
-    "mechanical_reviewer_model": "anthropic/claude-haiku-4-5",
+    "writer_model": "provider/platform-native-writer",
+    "writer_output": "Example draft written to feel native to X.",
+    "writer_rationale": "The writer optimized for conversational X phrasing and preserved the source context without treating it as instructions.",
+    "mechanical_reviewer_model": "provider/fast-review-model",
     "mechanical_reviewer_output": "PASS: no numbered list, no template language, acceptable length.",
-    "editor_model": "anthropic/claude-sonnet-4-6",
+    "editor_model": "provider/strong-editor-model",
     "editor_output": "Example final text that passed review.",
     "editor_rationale": "The editor made the draft more specific, removed generic phrasing, and checked authenticity, reputation, medical claims, and private-data leakage.",
     "objections": "No blocking objections remain. Residual risk is low because the text makes no unsupported claims.",
-    "final_selection_rationale": "Final text uses the edited version because it is more specific and safer than the raw Grok draft."
+    "final_selection_rationale": "Final text uses the edited version because it is more specific and safer than the raw writer draft."
   },
   "relationship_context": {
     "status": "unknown",
@@ -26,10 +26,10 @@
     "confidence": "needs_review"
   },
   "final_text": "Example final text that passed review.",
-  "operator_approval": "Operator approved candidate example-001 for quote-post execution.",
+  "operator_approval": "",
   "checks": {
-    "haiku_review": "pass",
-    "sonnet_review": "pass",
+    "mechanical_review": "pass",
+    "adversarial_review": "pass",
     "rule_pass": "pass",
     "untrusted_input_pass": "pass",
     "medical_claims": "pass",
@@ -45,7 +45,7 @@
     "daily_quota_available": "pass",
     "cadence_window_available": "pass"
   },
-  "final_decision": "approved_for_execution",
+  "final_decision": "needs_operator_approval",
   "exact_command": [
     "xurl",
     "--app",

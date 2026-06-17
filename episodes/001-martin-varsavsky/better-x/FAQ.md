@@ -28,10 +28,10 @@ guard blocks raw write commands that don't come through that gate. See
 ## Do I need OpenClaw?
 
 **No.** The offline observe/draft/review loop runs with plain `python3` and your
-own LLM — you paste the radar prompt into whatever model you use. OpenClaw is
-one nice way to run it on a schedule with an owner agent later, but it's
-optional. The kit's docs reference generic `~/.openclaw/...` paths only as a
-convenient workspace location; any directory works.
+own LLM — you paste the radar prompt into whatever model you use. OpenClaw,
+Hermes, Codex, or another local agent runtime can host it later,
+but none are required for the starter loop. The default workspace is
+`~/.betterx/workspace`, and any private directory works.
 
 ## Do I need the X API?
 
