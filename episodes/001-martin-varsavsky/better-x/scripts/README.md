@@ -41,6 +41,7 @@ JSON against the kit schema, checks the STOP file and the `autonomy` /
 - every entry in `checks` and `policy` is `pass`
 - `autonomy.stop_all_external_actions` is false (or the action is an allowed exception)
 - `x.write_enabled` is true
+- `artifact.action_type` is listed in `x.allowed_actions`
 - the STOP file is clear (or absent, with the autonomy block governing)
 
 Default is `--dry-run`. Even with `--execute` on an allowed artifact, posting is
@@ -85,5 +86,8 @@ python3 betterx_smoke_check.py \
    drafts as review-artifact JSON in `vault/05-runs/draft-queues/`.
 3. A human reviews each artifact, sets `operator_approval` and
    `final_decision: approved_for_execution`.
-4. `betterx_action_gate.py --execute` — the gate re-checks everything; only then
-   would a (wired) poster act.
+4. If you intentionally want a live action, enable `x.write_enabled`, add the
+   exact action class to `x.allowed_actions`, and clear STOP in your private
+   runtime workspace.
+5. `betterx_action_gate.py --execute` — the gate re-checks everything; only then
+   would a wired poster act.

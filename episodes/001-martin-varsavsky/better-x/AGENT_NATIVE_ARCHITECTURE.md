@@ -13,11 +13,11 @@ The first design created a split authority boundary:
 - The owner agent could still act from conversation context and direct tools.
 - better-x rules lived in files, but the active operator-facing agent could bypass them.
 
-That is not the right OpenClaw shape for a reputationally sensitive social system.
+That is not the right shape for a reputationally sensitive social system.
 
-## OpenClaw Pattern To Follow
+## Runtime Pattern To Follow
 
-OpenClaw best practice is:
+The runtime pattern to follow is:
 
 - put durable operating authority in the owner agent's `AGENTS.md` as standing orders;
 - use cron as a trigger for those standing orders, not as a duplicate instruction source;
@@ -86,20 +86,20 @@ Every public action starts as a workflow item:
 1. `intake`: classify requested action and risk.
 2. `preflight`: check STOP, cost, quota, cadence, account, and tool availability.
 3. `source`: read only approved sources and store provenance.
-4. `draft`: Grok writer when available; fallback model only if configured.
-5. `mechanical_review`: Haiku or configured fast reviewer.
-6. `editorial_review`: Sonnet or configured strong editor.
+4. `draft`: platform-native writer role when configured; fallback writer role otherwise.
+5. `mechanical_review`: configured fast reviewer.
+6. `editorial_review`: configured strong editor.
 7. `artifact`: write JSON artifact with all outputs and objections.
 8. `approval`: require operator approval unless standing authority exists.
 9. `execute`: only `scripts/betterx_action_gate.py`.
 10. `verify`: read back result when possible.
 11. `learn`: update memory from approval, edit, rejection, metric, or failure.
 
-## Cron Shape
+## Scheduler Shape
 
-Cron prompts should reference the standing order, not restate the whole workflow.
+Scheduler prompts should reference the standing order, not restate the whole workflow.
 
-Example:
+OpenClaw example:
 
 ```bash
 openclaw cron add \
@@ -116,10 +116,10 @@ openclaw cron add \
 
 The generic better-x package must install as an owner-agent program by default.
 
-It should not create a separate OpenClaw agent unless the installer is explicitly run with an advanced `--create-specialist-agent` flag.
+It should not create a separate runtime agent unless the installer is explicitly run with an advanced `--create-specialist-agent` flag.
 
 ## Safety Rule
 
-Direct `xurl` write commands are implementation details of `betterx_action_gate.py`, not actions that the owner agent or a cron prompt should call.
+Direct `xurl` write commands are implementation details of `betterx_action_gate.py`, not actions that the owner agent or a scheduler prompt should call.
 
 If an operator wants stronger runtime enforcement, package a plugin hook that blocks direct better-x X write commands unless the caller is the approved action gate.

@@ -191,14 +191,21 @@ def evaluate(artifact, config, workspace, stop_override):
     else:
         reasons.append("OK: autonomy.stop_all_external_actions is false")
 
-    # 8. write_enabled must be true.
+    # 8. write_enabled must be true, and the action class must be allow-listed.
     x_cfg = config.get("x", {}) if isinstance(config, dict) else {}
     write_enabled = bool(x_cfg.get("write_enabled", False))
+    allowed_actions = x_cfg.get("allowed_actions", []) or []
     if not write_enabled:
         allow = False
         reasons.append("REFUSE: config x.write_enabled is false (writes disabled)")
     else:
         reasons.append("OK: config x.write_enabled is true")
+
+    if action_type not in allowed_actions:
+        allow = False
+        reasons.append("REFUSE: action_type %r is not in config x.allowed_actions" % action_type)
+    else:
+        reasons.append("OK: action_type %r is in config x.allowed_actions" % action_type)
 
     # 9. STOP control file.
     stop_active, stop_detail = _stop_state(workspace, stop_override)

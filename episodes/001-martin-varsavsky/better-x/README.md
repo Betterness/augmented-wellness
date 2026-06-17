@@ -2,7 +2,7 @@
 title: better-x
 tags:
   - betterx
-  - openclaw
+  - agent-runtime
   - social-autopilot
 status: active
 ---
@@ -16,6 +16,26 @@ It is a build-log artifact from the show: a working local **observe -> draft ->
 review** prompt flow plus a guarded **dry-run action gate**. Live X posting is a
 **stub** you wire up later — out of the box the kit is offline, autonomy is off,
 and nothing posts. Fork it, drop in your own identity, and run the loop.
+
+It is not tied to one agent runtime. The core kit is plain files plus Python
+scripts, so it can run from a terminal, OpenClaw, Hermes, Codex, or another
+local agentic platform. The OpenClaw plugin is included as an
+experimental adapter, not as a requirement.
+
+## What you get in 10 minutes
+
+After the quickstart you should have:
+
+- a private runtime folder with a seed identity, voice, topic graph, and safety
+  policies;
+- a generated `radar-prompt.txt` you can paste into your own model;
+- one example review artifact shape for drafts;
+- a gate command that refuses to post until STOP is clear, writes are enabled,
+  the action is allow-listed, and a human approval is present.
+
+The useful output is not a live bot. It is a safer editorial loop you can adapt:
+**watch a topic, draft in your voice, review adversarially, then decide what
+deserves to go out.**
 
 Start here:
 
@@ -40,9 +60,9 @@ Portfolio shared on the AI Daily Brief podcast.
 Copy the seed into a private workspace and run the loop:
 
 ```bash
-mkdir -p ~/.openclaw/workspace/programs/betterx
-cp -R runtime-vault-seed/. ~/.openclaw/workspace/programs/betterx/
-cp betterx.config.example.json ~/.openclaw/workspace/programs/betterx/betterx.config.json
+mkdir -p ~/.betterx/workspace
+cp -R runtime-vault-seed/. ~/.betterx/workspace/
+cp betterx.config.example.json ~/.betterx/workspace/betterx.config.json
 ```
 
 Build a drafting prompt, paste it into your own LLM, capture the draft as a
@@ -50,10 +70,10 @@ review artifact, then dry-run the gate:
 
 ```bash
 python3 scripts/betterx_radar.py \
-  --workspace ~/.openclaw/workspace/programs/betterx --out radar-prompt.txt
+  --workspace ~/.betterx/workspace --out radar-prompt.txt
 
 python3 scripts/betterx_action_gate.py \
-  --workspace ~/.openclaw/workspace/programs/betterx \
+  --workspace ~/.betterx/workspace \
   --artifact vault/05-runs/draft-queues/<candidate-review>.json \
   --action quote \
   --dry-run
@@ -63,7 +83,7 @@ Sanity-check the runtime at any time:
 
 ```bash
 python3 scripts/betterx_smoke_check.py \
-  --workspace ~/.openclaw/workspace/programs/betterx
+  --workspace ~/.betterx/workspace
 ```
 
 Full walkthrough in [EXAMPLE_WORKFLOW.md](EXAMPLE_WORKFLOW.md).
@@ -84,17 +104,17 @@ Raw X exports, cookies, sessions, credentials, browser profiles, action logs, an
 
 ## Packaging Goal
 
-better-x should become a reproducible OpenClaw kit:
+better-x should become a reproducible agent-runtime kit:
 
 - a public runtime vault seed;
 - an owner-agent standing-order program contract;
-- native OpenClaw cron jobs targeting the owner agent for hourly radar, engagement monitoring, and daily learning;
+- optional runtime jobs targeting the owner agent for hourly radar, engagement monitoring, and daily learning;
 - explicit action policies and STOP exceptions;
 - explicit cost budgets for X API reads/actions and model usage;
 - an untrusted-input policy for prompt-injection safety;
-- a Grok-writer / Haiku-mechanical / Sonnet-editor review process;
+- a platform-native writer / fast mechanical reviewer / strong editorial reviewer process;
 - an Obsidian-style social graph vault so replies and quote posts know whether someone is a friend, mentor, advisor, customer, journalist, stranger, or critic;
 - a JSON publication artifact and executable action gate;
 - cadence and reporting policies so the prototype does not batch-post or bury the operator in unusable reports;
-- one canonical program workspace owned by the operator-facing OpenClaw agent;
+- one canonical program workspace owned by the operator-facing agent;
 - a feedback ledger pattern for self-learning from edits, approvals, rejections, and metrics.
