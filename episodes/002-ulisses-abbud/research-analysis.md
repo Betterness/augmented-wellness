@@ -50,7 +50,7 @@ Representative papers:
 - PMID [41522518](https://pubmed.ncbi.nlm.nih.gov/41522518/) — delayed heart-rate recovery and variability compared with endurance athletes.
 - PMID [38236302](https://pubmed.ncbi.nlm.nih.gov/38236302/) — monitoring training, performance, biomarkers, and psychological state across a triathlete season.
 
-Product implication: Bett-i should turn HRV into questions and actions, not a fake diagnosis. Example: "Your HRV is low relative to baseline, and your sleep/resting HR also suggest strain. Consider an easier session or a downshift protocol; talk to a clinician if symptoms are unusual."
+Product implication: Bett-i should turn HRV into better questions and practical choices. Example: "Your HRV is low relative to baseline, and your sleep/resting HR also suggest strain. Consider an easier session or a downshift protocol; talk to a clinician if symptoms are unusual."
 
 ### 3. Fueling is part of recovery
 
@@ -89,13 +89,13 @@ Representative papers:
 - PMID [40788281](https://pubmed.ncbi.nlm.nih.gov/40788281/) — real-time biometric monitoring during a 200-km ultra-endurance race.
 - PMID [41755051](https://pubmed.ncbi.nlm.nih.gov/41755051/) — systematic review of physiological safety monitoring from cycling to micro-mobility.
 
-## What we should not overclaim
+## A smarter way to read the signals
 
-- HRV does not diagnose overtraining by itself.
-- Wearables can be directionally useful and still be noisy.
-- Endurance sport can support health and identity, but high load also creates risks.
-- Recovery guidance should stay educational unless a qualified clinician or coach is in the loop.
-- The episode should not imply that one protocol works for every athlete, founder, or executive.
+The most useful lesson from the episode is not that one metric, device, or protocol has the answer. It is that the body is always giving context.
+
+HRV, sleep, resting heart rate, training load, soreness, appetite, mood, and stress all become more valuable when they are read together. A low HRV day does not tell the whole story. A great training block does not mean recovery is optional. A wearable score is not a diagnosis. But the pattern across signals can help a coach, clinician, or personal agent ask better questions and make the next decision more intelligently.
+
+That is the Augmented Wellness lens: use data to notice earlier, adapt faster, and stay honest about uncertainty.
 
 ## How this becomes a Bett-i / Betterness One artifact
 
