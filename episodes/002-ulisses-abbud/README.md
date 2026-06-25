@@ -1,4 +1,4 @@
-# Episode 002 — Ulisses Abbud: Ride + Recovery Intelligence
+# Episode 002 — Ulisses Abbud: The Art of Recovery
 
 This is the public artifact for Augmented Wellness episode 002 with Ulisses Abbud.
 
@@ -8,8 +8,8 @@ The episode's central idea is simple and useful: recovery is not the reward afte
 
 - `artifacts/the-art-of-longevity-ulisses-abbud.pdf` — Ulisses's original presentation deck.
 - `research-analysis.md` — Betterness analysis connecting the episode themes to the local Ironman / endurance research corpus.
-- `questions/recovery-prompts.md` — prompts to use with Bett-i, a coach, or your own agent.
-- `starter-prompts.md` — practical prompts for turning training, HRV, sleep, and recovery signals into daily actions.
+- `questions/recovery-prompts.md` — practical questions for reading HRV, sleep, training load, stress, and readiness.
+- `artifact.md` — how the episode becomes a recovery-intelligence pattern for coaches, athletes, and high performers.
 
 ## How to use this
 
