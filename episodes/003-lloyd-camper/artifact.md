@@ -1,47 +1,40 @@
-# Healthspan Baseline Builder
+# Artifact — Healthspan Baseline Context Portfolio
 
-Dr. Lloyd Camper's episode keeps returning to one practical idea: most people wait for the warning light. A better approach is to build a baseline early enough that a clinician can see patterns before they become obvious problems.
+The useful artifact from Dr. Lloyd Camper's episode is not a lab checklist.
 
-## 1. The baseline map
+It is a personal context system that helps a person organize who they are, what they are trying to prevent or improve, what data they already have, what is missing, and what a qualified clinician should help interpret.
 
-Use this as a starting checklist for a doctor-supervised healthspan conversation:
+Start here:
 
-| Area | Why it matters | Bring to the visit |
-|---|---|---|
-| History and goals | A lab result means more when it is tied to symptoms, family history, medications, sport, sleep, and goals. | Current medications and supplements, family history, injuries, recent symptoms, and the goal you care about most. |
-| Blood work | Blood work can reveal early metabolic, inflammatory, lipid, hormonal, or deficiency patterns that may not be obvious from how you feel. | Recent labs, dates, reference ranges, and any prior labs for trend comparison. |
-| Body composition | Weight alone hides the difference between lean mass, fat mass, visceral fat, and bone density. | DEXA or body-composition report if available. |
-| Cardiorespiratory fitness | VO2 max and related testing help frame the "engine" side of performance and healthspan. | VO2 max report, protocol, device used, and whether the test was maximal. |
-| Recovery and sleep | Training, work, stress, and recovery signals change how data should be interpreted. | Sleep trends, resting heart rate, HRV trends, training load, and subjective fatigue. |
-| Habit reality | The best plan is the one you can repeat long enough to matter. | Weekly schedule, constraints, travel, exercise preference, nutrition friction, and support system. |
+**[`context-portfolio/`](./context-portfolio)**
 
-## 2. The gas-tank question
+## What it does
 
-Traditional medicine often begins when the warning light comes on. A healthspan conversation asks a different question:
+The portfolio helps someone prepare for a more useful healthspan conversation:
 
-> How full is the tank, and what would help keep it from drifting toward empty?
+- Why does building a baseline matter now?
+- What data do I actually have?
+- What am I guessing about?
+- What changed recently?
+- What should not be interpreted without clinical context?
+- What should I bring to my doctor?
 
-That does not mean chasing every marker or over-testing. It means reading the whole picture with a qualified clinician.
+## What is included
 
-## 3. The practical output
+- [`context-portfolio/01-healthspan-identity.md`](./context-portfolio/01-healthspan-identity.md)
+- [`context-portfolio/02-history-goals-and-risk.md`](./context-portfolio/02-history-goals-and-risk.md)
+- [`context-portfolio/03-labs-dexa-vo2-and-reports.md`](./context-portfolio/03-labs-dexa-vo2-and-reports.md)
+- [`context-portfolio/04-habits-recovery-and-metabolism.md`](./context-portfolio/04-habits-recovery-and-metabolism.md)
+- [`context-portfolio/05-clinician-visit-brief.md`](./context-portfolio/05-clinician-visit-brief.md)
+- [`context-portfolio/06-betterness-connection.md`](./context-portfolio/06-betterness-connection.md)
+- [`context-portfolio/interviewer-agent.md`](./context-portfolio/interviewer-agent.md)
 
-After a baseline visit, ask for a simple one-page summary:
+## How Betterness makes it come alive
 
-- what looks strong;
-- what should be watched;
-- what should be repeated, and when;
-- what lifestyle changes are worth trying first;
-- what requires medical follow-up;
-- what not to worry about yet.
+The markdown portfolio works anywhere: Claude, Codex, ChatGPT, or a local agent.
 
-## 4. The Bett-i layer
+The stronger version happens when you go to [betterness.ai](https://betterness.ai), connect your account, and allow Bett-i to work with your permissioned context: labs, DEXA, VO2 max, wearables, goals, and prior conversations. As Bett-i moves into betterness.ai, this is the intended direction: your baseline becomes a living context layer, not a pile of disconnected reports.
 
-Bett-i should help organize your questions, summarize your data, and make the medical visit more productive. It should not diagnose, prescribe, or override the clinician.
+## Boundary
 
-The useful pattern is:
-
-1. Upload or summarize data.
-2. Ask Bett-i to organize it into questions.
-3. Bring those questions to a qualified clinician.
-4. Use the clinician's guidance to build a realistic plan.
-5. Track whether the plan is actually working.
+This is educational. It is not medical advice, diagnosis, treatment, or a replacement for a physician. Use it to organize information and prepare better clinician questions.

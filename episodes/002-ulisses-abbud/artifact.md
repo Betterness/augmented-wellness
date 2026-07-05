@@ -1,27 +1,40 @@
-# Artifact — The Art of Recovery
+# Artifact — Cycling + Recovery Context Portfolio
 
-Episode 002 leaves a practical public companion around Ulisses Abbud's core idea:
-recovery is not the reward after performance. It is the adaptation mechanism.
+The useful artifact from Ulisses Abbud's episode is not a generic recovery checklist.
 
-## Included
+It is a personal context system that helps an assistant understand the person behind the data: why they ride, what they are training for, how stress shows up, which signals they trust, where they overreach, and what a coach should know before changing the plan.
 
-- `artifacts/the-art-of-longevity-ulisses-abbud.pdf` — Ulisses's deck on stress, recovery, resilience, and longevity.
-- `research-analysis.md` — Betterness synthesis connecting the episode to the local Ironman / endurance research corpus.
-- `questions/recovery-prompts.md` — a question bank for reading HRV, sleep, training load, stress, and subjective readiness without pretending the data is a diagnosis.
-- `prompts.md` — optional builder notes for turning those questions into a coach or personal-agent workflow.
+Start here:
 
-## What to build
+**[`context-portfolio/`](./context-portfolio)**
 
-A recovery-intelligence layer that can read training context, wearable signals,
-and subjective stress, then help a person ask better questions:
+## What it does
 
-- what looks strained;
-- what may be under-recovered;
-- what to ask a coach or clinician;
-- what one small action might make today's recovery more real.
+The portfolio helps a rider answer deeper questions:
 
-## Guardrails
+- What does recovery mean for me, not in general?
+- What am I asking my body to adapt to this week?
+- Which signal do I over-trust?
+- Which signal do I under-trust?
+- What is my smallest useful experiment for the next 7 days?
+- What should I ask my coach before I push harder?
 
-This is educational. It is not a medical device, diagnosis, training prescription,
-or replacement for a coach or clinician. Wearable data is useful, but noisy; the
-artifact is designed to improve questions, not to pretend certainty.
+## What is included
+
+- [`context-portfolio/01-rider-identity.md`](./context-portfolio/01-rider-identity.md)
+- [`context-portfolio/02-training-history-and-goals.md`](./context-portfolio/02-training-history-and-goals.md)
+- [`context-portfolio/03-recovery-profile.md`](./context-portfolio/03-recovery-profile.md)
+- [`context-portfolio/04-data-sources-and-signals.md`](./context-portfolio/04-data-sources-and-signals.md)
+- [`context-portfolio/05-decision-rules-and-coach-questions.md`](./context-portfolio/05-decision-rules-and-coach-questions.md)
+- [`context-portfolio/06-betterness-connection.md`](./context-portfolio/06-betterness-connection.md)
+- [`context-portfolio/interviewer-agent.md`](./context-portfolio/interviewer-agent.md)
+
+## How Betterness makes it come alive
+
+The markdown portfolio works anywhere: Claude, Codex, ChatGPT, or a local agent.
+
+The stronger version happens when you go to [betterness.ai](https://betterness.ai), connect your account, and allow Bett-i to work with your permissioned context: wearables, training data, labs, goals, and prior conversations. As Bett-i moves into betterness.ai, this is the intended direction: your portfolio becomes a living context layer, not a static form.
+
+## Boundary
+
+This is educational. It is not a medical device, diagnosis, training prescription, or replacement for a coach or clinician. Wearable data is useful, but noisy. The artifact is designed to improve questions, not pretend certainty.

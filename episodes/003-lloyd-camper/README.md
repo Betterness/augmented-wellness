@@ -6,14 +6,14 @@ The episode's central idea is that longevity starts with knowing your baseline. 
 
 ## What is included
 
-- `healthspan-baseline-builder.md` — a practical checklist for building a first healthspan baseline.
-- `questions/doctor-visit-prep.md` — questions to bring to a qualified clinician after labs, DEXA, VO2, or wearable data.
-- `betti-prompts.md` — prompts for using Bett-i to organize questions and prepare for a medical conversation.
+- `context-portfolio/` — the main artifact: a Healthspan Baseline Context Portfolio for preparing a smarter clinician conversation.
+- `artifact.md` — the landing page for the portfolio artifact and Betterness connection.
+- `prompts.md` — prompts for using an assistant to organize questions and prepare for a medical conversation.
 - `claims.md` — public claim guardrails for the episode.
 
 ## How to use this
 
-Start with the baseline checklist. The goal is not to diagnose yourself from a dashboard. The goal is to understand what information is missing, what should be interpreted by a qualified clinician, and what habits are realistic enough to continue for years.
+Start with `context-portfolio/`. The goal is not to diagnose yourself from a dashboard. The goal is to understand what information is missing, what should be interpreted by a qualified clinician, and what habits are realistic enough to continue for years.
 
 ## Guardrails
 

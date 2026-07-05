@@ -6,14 +6,15 @@ The episode's central idea is simple and useful: recovery is not the reward afte
 
 ## What is included
 
+- `context-portfolio/` — the main artifact: a Cycling + Recovery Context Portfolio for understanding the person behind the training data.
 - `artifacts/the-art-of-longevity-ulisses-abbud.pdf` — Ulisses's original presentation deck.
 - `research-analysis.md` — Betterness analysis connecting the episode themes to the local Ironman / endurance research corpus.
 - `questions/recovery-prompts.md` — practical questions for reading HRV, sleep, training load, stress, and readiness.
-- `artifact.md` — how the episode becomes a recovery-intelligence pattern for coaches, athletes, and high performers.
+- `artifact.md` — the landing page for the portfolio artifact and Betterness connection.
 
 ## How to use this
 
-Start with the deck, then read the research analysis. The goal is not to diagnose yourself from wearable data. The goal is to ask better questions: What is my body adapting to? What is the cost of today's stress? What should change today so tomorrow's training or work actually lands?
+Start with `context-portfolio/`, then read the deck and research analysis. The goal is not to diagnose yourself from wearable data. The goal is to understand the person behind the data so an assistant, coach, or Bett-i can ask better questions: What is my body adapting to? What is the cost of today's stress? What should I ask before changing the plan?
 
 ## Guardrails
 
