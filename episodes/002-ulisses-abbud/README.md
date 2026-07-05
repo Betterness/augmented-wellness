@@ -1,12 +1,16 @@
-# Episode 002 — Ulisses Abbud: The Art of Recovery
+# Episode 002 — Ulisses Abbud: Cycling + Recovery AI Interviewer
 
 This is the public artifact for Augmented Wellness episode 002 with Ulisses Abbud.
 
 The episode's central idea is simple and useful: recovery is not the reward after performance. Recovery is the adaptation mechanism that allows performance to improve.
 
+The artifact turns that idea into something you can use: a private AI interviewer that helps a rider, founder, coach, or high performer explain the person behind the training data before an assistant reacts to HRV, sleep, fatigue, or training load.
+
 ## What is included
 
-- `context-portfolio/` — the main artifact: a Cycling + Recovery Context Portfolio for understanding the person behind the training data.
+- `context-portfolio/` — the main artifact: a Cycling + Recovery AI Interviewer and Context Portfolio.
+- `context-portfolio/interviewer-agent.md` — copy this into Claude, ChatGPT, Codex, a local agent, or any LLM to interview yourself.
+- `context-portfolio/01-rider-identity.md` through `06-betterness-connection.md` — modular files for rider identity, training history, recovery profile, data sources, decision rules, and the Betterness connection.
 - `artifacts/the-art-of-longevity-ulisses-abbud.pdf` — Ulisses's original presentation deck.
 - `research-analysis.md` — Betterness analysis connecting the episode themes to the local Ironman / endurance research corpus.
 - `questions/recovery-prompts.md` — practical questions for reading HRV, sleep, training load, stress, and readiness.
@@ -14,7 +18,15 @@ The episode's central idea is simple and useful: recovery is not the reward afte
 
 ## How to use this
 
-Start with `context-portfolio/`, then read the deck and research analysis. The goal is not to diagnose yourself from wearable data. The goal is to understand the person behind the data so an assistant, coach, or Bett-i can ask better questions: What is my body adapting to? What is the cost of today's stress? What should I ask before changing the plan?
+Start with `context-portfolio/interviewer-agent.md`. Paste it into Claude, ChatGPT, Codex, a local agent, or another LLM and let it interview you. Then save the answers into the markdown files in `context-portfolio/`.
+
+Once the portfolio exists, you can use it three ways:
+
+1. **LLM context** — Add the markdown files to a project or prompt so every conversation starts with your real training and recovery context.
+2. **MCP resource** — Serve the folder as an MCP resource so connected tools can read it automatically.
+3. **Betterness connection** — Go to [betterness.ai](https://betterness.ai), connect your account, and let Bett-i enrich the portfolio with permissioned wearable, training, lab, goal, and lifestyle data.
+
+The goal is not to diagnose yourself from wearable data. The goal is to understand the person behind the data so an assistant, coach, clinician, or Bett-i can ask better questions: What is my body adapting to? What is the cost of today's stress? What should I ask before changing the plan?
 
 ## Guardrails
 

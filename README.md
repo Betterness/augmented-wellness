@@ -20,9 +20,11 @@
 
 It's a build log.
 
-Every episode pairs a real builder — founders, doctors, healers, coaches, operators — with the **things we actually build on the show**: starter kits, prompts, source maps, claim notes, and agent-readable companion files. This repo is the lab where those artifacts live. You don't just listen — you leave with something you can open, read, fork, and build on.
+Every episode pairs a real builder — founders, doctors, healers, coaches, operators — with the **things we actually build on the show**: AI interviewers, starter kits, prompts, source maps, claim notes, and agent-readable companion files. This repo is the lab where those artifacts live. You don't just listen — you leave with something you can open, read, fork, and make your own.
 
-To be precise about what that means: an artifact here is a **starter kit**, not a finished product. Episode 001 ships a working *local* "observe → draft" prompt flow and a guarded **DRY-RUN** action gate. The parts that touch the outside world — live posting to X, real credentials — are **stubs you wire up yourself**. That is the deal, and we keep it honest.
+The recurring idea is simple: create your own AI interviewer. Start with markdown files that help an assistant understand who you are, what you want, what data matters, and what questions are worth asking. Use them with Claude, ChatGPT, Codex, a local agent, or any LLM that can read Markdown. Serve them through MCP if you want tools to read the context automatically. Connect Betterness when you want that static portfolio to come alive with permissioned wearables, labs, reports, goals, and lifestyle data.
+
+To keep the promise honest, every artifact is a **starter system**, not a finished medical, coaching, or publishing product. Some artifacts are code kits. Some are structured context portfolios. Some are agent prompts. Anything that touches the outside world — live posting, credentials, health decisions, clinical interpretation — stays opt-in, disclosed, and bounded by the guardrails in the episode folder.
 
 ---
 
@@ -45,6 +47,7 @@ If you want to *experience* an episode, start there.
 The hands-on companion. The place to go **after** an episode, to **try / fork / inspect / build**:
 
 - **Starter kits** — the forkable artifact from each episode (e.g. `better-x`).
+- **AI interviewers** — markdown portfolios and interviewer prompts that help an assistant understand the person before it reacts to disconnected data.
 - **Prompts** — the actual prompt flows the artifact runs.
 - **Source maps** — how an artifact reads from your own context, with empty templates.
 - **Claim notes** — what an episode asserts, and where it's grounded vs. paraphrased.
@@ -70,11 +73,12 @@ Each episode folder is self-contained. The pattern is the same every time:
 
 1. **Fork** this repo.
 2. **Open the episode folder** — e.g. [`episodes/001-martin-varsavsky`](./episodes/001-martin-varsavsky) — and read its `README.md` for the episode-specific walkthrough.
-3. **Open the artifact** inside it — e.g. [`better-x`](./episodes/001-martin-varsavsky/better-x).
-4. **Fill in the blank vault.** Every template ships empty — drop in your own identity, topic, and sources. Nothing personal is pre-loaded.
-5. **Run it locally behind the action gate** — autonomy **off**, review queue **on**, posting in **DRY-RUN** — until you trust it. Wiring up a live integration is a deliberate, opt-in step you take last.
+3. **Open the artifact** inside it — a code kit, context portfolio, prompt system, or agent pattern.
+4. **Fill in the empty context.** Every template ships blank — drop in your own identity, goals, data sources, constraints, and questions. Nothing personal is pre-loaded.
+5. **Use it with your AI tool of choice.** Paste it into Claude, ChatGPT, Codex, a local agent, or serve it as an MCP resource so connected tools can read it automatically.
+6. **Connect Betterness when you want living context.** Go to [betterness.ai](https://betterness.ai), connect your account, and let permissioned health, wellness, training, lab, and lifestyle data enrich the interviewer.
 
-For 001 specifically, the writer/reviewer prompt flow runs locally; the X-posting path is a stub you connect to your own developer credentials when (and if) you're ready.
+For action-taking artifacts such as `better-x`, keep autonomy off and review queues on until you deliberately wire your own credentials and accept responsibility for anything that publishes.
 
 ## Artifact design principles
 
