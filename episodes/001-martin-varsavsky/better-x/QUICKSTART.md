@@ -13,6 +13,10 @@ chosen topic, in your own voice. It is a build-log artifact from the show: a
 working local **observe -> draft -> review** prompt flow plus a guarded
 **dry-run action gate**. Live posting is a stub you wire up later.
 
+The core kit is runtime-agnostic: plain markdown/JSON files plus Python scripts.
+Use it from a terminal, OpenClaw, Hermes, Codex, or another local agentic
+platform. OpenClaw-specific files are optional adapters.
+
 This is what the kit gives you on day one:
 
 - A way to turn what's happening around your topic into a **drafting prompt** you
@@ -27,6 +31,19 @@ This is what the kit gives you on day one:
 This is not "runnable code that posts for you." Nothing reaches X until you
 add credentials and explicitly flip the write switches — and even then, every
 write passes the gate.
+
+## The 10-minute result
+
+By the end of this quickstart you will have:
+
+1. a private `~/.betterx/workspace` runtime folder;
+2. a generated `radar-prompt.txt` grounded in the seed vault;
+3. an example review artifact format for draft posts/replies/quotes;
+4. a dry-run gate result that proves the kit refuses to post while STOP,
+   write permissions, action allow-lists, or human approval are missing.
+
+That is the point: first build a safe editorial loop, then decide later whether
+you want to connect any live platform adapter.
 
 ## What it will NOT do by default
 
@@ -49,9 +66,9 @@ online once you've copied the seed in.
    identity and any private files out of this repo folder.
 
    ```bash
-   mkdir -p ~/.openclaw/workspace/programs/betterx
-   cp -R runtime-vault-seed/. ~/.openclaw/workspace/programs/betterx/
-   cp betterx.config.example.json ~/.openclaw/workspace/programs/betterx/betterx.config.json
+   mkdir -p ~/.betterx/workspace
+   cp -R runtime-vault-seed/. ~/.betterx/workspace/
+   cp betterx.config.example.json ~/.betterx/workspace/betterx.config.json
    ```
 
 2. **Fill in who you are and what you cover.** Edit, in your runtime workspace
@@ -72,11 +89,11 @@ online once you've copied the seed in.
 
    ```bash
    python3 scripts/betterx_radar.py \
-     --workspace ~/.openclaw/workspace/programs/betterx \
+     --workspace ~/.betterx/workspace \
      --out radar-prompt.txt
    ```
 
-   You paste that prompt into your own LLM (Claude, etc.). Nothing is sent
+   You paste that prompt into your own model or agent runtime. Nothing is sent
    anywhere.
 
 4. **Review the drafts.** The model's output becomes a review artifact in
@@ -110,7 +127,7 @@ exact command it *would* execute — and stops there:
 
 ```bash
 python3 scripts/betterx_action_gate.py \
-  --workspace ~/.openclaw/workspace/programs/betterx \
+  --workspace ~/.betterx/workspace \
   --artifact vault/05-runs/draft-queues/<candidate-review>.json \
   --action quote \
   --dry-run
@@ -134,7 +151,7 @@ you would need:
 2. A real `xurl`-style adapter installed and pointed at by
    `x.real_xurl_bin` in your config.
 3. `x.read_enabled` / `x.write_enabled` set to `true` and the relevant action
-   class allowed in your control policy.
+   class added to `x.allowed_actions` and allowed in your control policy.
 4. AI-assistance disclosure decided up front (see [SAFETY.md](SAFETY.md)).
 
 Until you do all of that, better-x stays an offline observe/draft tool.
@@ -145,7 +162,7 @@ Confirm the runtime is wired up correctly (read-only, no network):
 
 ```bash
 python3 scripts/betterx_smoke_check.py \
-  --workspace ~/.openclaw/workspace/programs/betterx
+  --workspace ~/.betterx/workspace
 ```
 
 ## Where to go next

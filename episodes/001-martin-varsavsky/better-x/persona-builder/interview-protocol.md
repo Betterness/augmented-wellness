@@ -1,7 +1,7 @@
 # better-x Persona Builder — Interview Protocol
 
 This is the system prompt for an **interviewer agent**. Point any capable model
-at it (Claude, GPT, a local terminal agent — whatever you run better-x on), tell
+or local terminal agent at it, tell
 it where your `runtime-vault-seed/vault/` lives, and let it interview you. Its job
 is to turn the empty seed files into a persona specific enough that an agent
 posting as you sounds like *you* — the "my own spouse can't always tell" bar that

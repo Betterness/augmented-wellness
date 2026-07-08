@@ -47,11 +47,10 @@ that's already gone out. The example shape is in
 A draft is not trusted until at least two independent models have looked at it
 and the rule passes are clean:
 
-1. **Writer** drafts platform-native text (Grok non-reasoning when configured,
-   otherwise the fallback model).
-2. **Mechanical reviewer** (Haiku) catches automation tells: numbered lists,
+1. **Writer** drafts platform-native text using your configured writer model.
+2. **Mechanical reviewer** catches automation tells: numbered lists,
    repeated structures, odd capitalization, length, link spam.
-3. **Adversarial / editorial reviewer** (Sonnet) critiques voice, authenticity,
+3. **Adversarial / editorial reviewer** critiques voice, authenticity,
    reputation risk, unsupported claims, and private-data leakage — and looks for
    reasons to reject.
 4. **Final safety pass** applies policy, medical, and action-type checks before
@@ -68,7 +67,7 @@ a dry run that validates and prints — never sends:
 
 ```bash
 python3 scripts/betterx_action_gate.py \
-  --workspace ~/.openclaw/workspace/programs/betterx \
+  --workspace ~/.betterx/workspace \
   --artifact vault/05-runs/draft-queues/<candidate-review>.json \
   --action quote \
   --dry-run

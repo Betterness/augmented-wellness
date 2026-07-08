@@ -39,7 +39,7 @@ you start.
 
 ## How to run it
 
-1. Open a session with the model you run better-x on (Claude, GPT, a terminal agent).
+1. Open a session with the model or terminal agent you run better-x on.
 2. Paste the contents of [`interview-protocol.md`](./interview-protocol.md) as the
    system prompt, and tell it where your `runtime-vault-seed/vault/` lives.
 3. Answer its questions. **Paste real posts** — yours, good and bad. That's the

@@ -4,32 +4,32 @@
   "owner_agent": "main",
   "operator_agent": "main",
   "worker_agent": "",
-  "workspace": "~/.openclaw/workspace/programs/betterx",
-  "model": "anthropic/claude-haiku-4-5",
+  "workspace": "~/.betterx/workspace",
+  "model": "provider/fast-general-model",
   "model_roles": {
     "candidate_reader": {
-      "primary": "xai/grok-4.20-0309-non-reasoning",
-      "fallback": "anthropic/claude-haiku-4-5",
+      "primary": "provider/platform-context-model",
+      "fallback": "provider/fast-general-model",
       "purpose": "Read platform-native context and identify likely post/reply/quote angles."
     },
     "writer": {
-      "primary": "xai/grok-4.20-0309-non-reasoning",
-      "fallback": "anthropic/claude-haiku-4-5",
+      "primary": "provider/platform-native-writer",
+      "fallback": "provider/fast-general-model",
       "purpose": "Draft platform-native public text."
     },
     "mechanical_reviewer": {
-      "primary": "anthropic/claude-haiku-4-5",
-      "fallback": "openai/gpt-5.4-mini",
+      "primary": "provider/fast-review-model",
+      "fallback": "provider/fast-general-model",
       "purpose": "Fast checks for numbered lists, repeated structures, capitalization, links, length, and automation tells."
     },
     "adversarial_reviewer": {
-      "primary": "anthropic/claude-sonnet-4-6",
-      "fallback": "openai/gpt-5.4",
+      "primary": "provider/strong-editor-model",
+      "fallback": "provider/strong-general-model",
       "purpose": "Deep critique of voice, authenticity, reputation, claims, private-data leakage, and the operator-specific voice test."
     },
     "final_safety": {
-      "primary": "anthropic/claude-sonnet-4-6",
-      "fallback": "openai/gpt-5.4",
+      "primary": "provider/strong-safety-model",
+      "fallback": "provider/strong-general-model",
       "purpose": "Final policy, medical, reputation, and action-type gate before execution."
     }
   },
@@ -45,14 +45,15 @@
     "account": "",
     "real_xurl_bin": "",
     "read_enabled": false,
-    "write_enabled": false
+    "write_enabled": false,
+    "allowed_actions": []
   },
-  "xai": {
+  "platform_context_model": {
     "enabled": false,
-    "provider_configured_in_openclaw": false,
-    "preferred_writer_model": "xai/grok-4.20-0309-non-reasoning",
-    "reasoning_writer_model": "xai/grok-4.20-0309-reasoning",
-    "note": "Enable after xAI/Grok auth is configured in OpenClaw. Until then writer falls back to the configured fallback model."
+    "provider_configured_in_runtime": false,
+    "preferred_writer_model": "provider/platform-native-writer",
+    "reasoning_writer_model": "provider/platform-native-reasoning-model",
+    "note": "Optional. Use a model that understands the target social platform well, then keep a separate reviewer model for quality and safety."
   },
   "profile_sources": [
     {
@@ -87,13 +88,13 @@
     },
     {
       "name": "main_agent_memory",
-      "path": "~/.openclaw/workspace/MEMORY.md",
+      "path": "~/.betterx/workspace/MEMORY.md",
       "required": false,
       "kind": "file"
     },
     {
       "name": "main_agent_user",
-      "path": "~/.openclaw/workspace/USER.md",
+      "path": "~/.betterx/workspace/USER.md",
       "required": false,
       "kind": "file"
     }

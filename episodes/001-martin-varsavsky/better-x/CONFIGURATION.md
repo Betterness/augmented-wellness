@@ -16,9 +16,9 @@ Copy both into a private workspace before editing — keep your real identity ou
 of this repo:
 
 ```bash
-mkdir -p ~/.openclaw/workspace/programs/betterx
-cp -R runtime-vault-seed/. ~/.openclaw/workspace/programs/betterx/
-cp betterx.config.example.json ~/.openclaw/workspace/programs/betterx/betterx.config.json
+mkdir -p ~/.betterx/workspace
+cp -R runtime-vault-seed/. ~/.betterx/workspace/
+cp betterx.config.example.json ~/.betterx/workspace/betterx.config.json
 ```
 
 ## betterx.config.example.json
@@ -30,9 +30,10 @@ Open the file alongside this page; every field is listed below.
 | Field | Default | Meaning |
 | --- | --- | --- |
 | `autonomy.stop_all_external_actions` | `true` | Master STOP. While `true`, the action gate executes nothing externally. |
-| `autonomy.allowed_action_exceptions` | `[]` | Action classes allowed *only when* STOP is lifted. Empty = nothing. |
+| `autonomy.allowed_action_exceptions` | `[]` | Narrow exception classes that may bypass the master STOP. Keep empty unless you have a specific supervised use case. |
 | `x.read_enabled` | `false` | Whether the X adapter may read. |
 | `x.write_enabled` | `false` | Whether the X adapter may write. Independent of `read_enabled`. |
+| `x.allowed_actions` | `[]` | Which write classes the adapter may attempt. Empty = no write class is allowed. |
 | `delivery.announce` | `false` | Whether the runtime announces actions to your delivery channel. |
 
 Leave these at their defaults until you've done a full offline pass and read
@@ -50,7 +51,7 @@ Leave these at their defaults until you've done a full offline pass and read
 
 ### Model roles
 
-`model` is the default model. `model_roles` assigns a `primary` and `fallback`
+`model` is the default model placeholder. `model_roles` assigns a `primary` and `fallback`
 for each stage of the pipeline:
 
 - `candidate_reader` — reads context and proposes angles.
@@ -60,11 +61,15 @@ for each stage of the pipeline:
   private-data critique.
 - `final_safety` — last policy / medical / action-type gate.
 
-The `xai` block enables the Grok writer once Grok auth is configured in your
-runtime; until then the writer uses its `fallback`. The mechanical and
-adversarial reviewers being **different models** is what makes the
-"two-model publication gate" in [SAFETY.md](SAFETY.md) real — don't collapse
-them to one model.
+The model names in the example config are intentionally generic placeholders.
+Replace them with whatever your runtime supports. The important part is role
+separation: the writer and reviewer should be different model roles so the same
+model is not drafting, approving, and executing its own work. That is what makes
+the "two-model publication gate" in [SAFETY.md](SAFETY.md) real.
+
+The optional `platform_context_model` block is where you can point to a model
+that understands the target social platform particularly well. Leave it disabled
+until your runtime has that provider configured.
 
 ### X adapter
 
@@ -75,6 +80,7 @@ them to one model.
 | `x.account` | `""` | The handle this runtime acts as. |
 | `x.real_xurl_bin` | `""` | Path to the real `xurl`-style binary. Empty = no live adapter; writes stay stubbed. |
 | `x.read_enabled` / `x.write_enabled` | `false` | See safety switches above. |
+| `x.allowed_actions` | `[]` | Allow-list for write classes such as `post`, `reply`, or `quote`. |
 
 ### Schedules
 
@@ -115,7 +121,8 @@ Three independent locks stand between a draft and a live post:
 1. **STOP / autonomy** — `autonomy.stop_all_external_actions` and
    `vault/00-control/STOP.md`. While set, the gate executes nothing.
 2. **write_enabled** — `x.write_enabled`. Even with STOP lifted, no write
-   adapter runs unless this is `true` and a real `x.real_xurl_bin` is set.
+   adapter runs unless this is `true`, the action is listed in
+   `x.allowed_actions`, and a real `x.real_xurl_bin` is set.
 3. **The gate + guard** — `scripts/betterx_action_gate.py` validates the
    artifact, and `bin/xurl` blocks any raw write that didn't come through it.
 

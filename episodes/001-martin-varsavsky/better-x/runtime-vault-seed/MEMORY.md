@@ -2,7 +2,7 @@
 
 Durable better-x memory lives here.
 
-Use OpenClaw memory and Dreaming to consolidate:
+Use your agent runtime's memory / reflection feature to consolidate:
 
 - operator-approved voice lessons;
 - recurring rejection patterns;

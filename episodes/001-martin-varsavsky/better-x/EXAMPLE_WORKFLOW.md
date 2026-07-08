@@ -23,7 +23,7 @@ Assumptions:
 Throughout, `$WS` is your workspace:
 
 ```bash
-WS=~/.openclaw/workspace/programs/betterx
+WS=~/.betterx/workspace
 ```
 
 ## 1. Observe — build a drafting prompt
@@ -44,8 +44,9 @@ automation tells). It is just text — read it before you use it.
 
 ## 2. Draft — paste into your own LLM
 
-Open `radar-prompt.md`, paste it into your LLM of choice (Claude, etc.), and let
-it draft. There's no API wiring in this step on purpose — your model, your call.
+Open `radar-prompt.md`, paste it into your model or agent runtime of choice, and
+let it draft. There's no API wiring in this step on purpose — your model, your
+call.
 
 A reasonable draft for this episode's topic space might be a reaction to the
 idea Martin describes in the transcript — that he built an agentic version of

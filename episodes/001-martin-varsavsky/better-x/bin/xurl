@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """BetterX xurl guard.
 
-Put this directory before the real xurl binary in OpenClaw's PATH.
+Put this directory before the real xurl binary in your runtime PATH.
 Read commands pass through. BetterX write commands are blocked unless they are
 executed by scripts/betterx_action_gate.py, which calls the real xurl binary
 directly.

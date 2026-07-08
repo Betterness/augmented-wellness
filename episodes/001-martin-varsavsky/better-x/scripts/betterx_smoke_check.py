@@ -94,7 +94,7 @@ def _check_config(report, config_path):
         report.ok("autonomy.stop_all_external_actions = %s"
                   % autonomy["stop_all_external_actions"])
 
-    # x.write_enabled must exist (default-closed is fine).
+    # x.write_enabled and x.allowed_actions must exist (default-closed is fine).
     x_cfg = cfg.get("x")
     if not isinstance(x_cfg, dict) or "write_enabled" not in x_cfg:
         report.fail("config.x.write_enabled missing")
@@ -104,6 +104,12 @@ def _check_config(report, config_path):
         if we:
             report.warn("x.write_enabled is TRUE — live writes are armed; "
                         "ensure STOP + operator approval discipline is in place")
+    if not isinstance(x_cfg, dict) or "allowed_actions" not in x_cfg:
+        report.fail("config.x.allowed_actions missing")
+    elif not isinstance(x_cfg["allowed_actions"], list):
+        report.fail("config.x.allowed_actions must be a list")
+    else:
+        report.ok("x.allowed_actions = %s" % x_cfg["allowed_actions"])
     return cfg
 
 
