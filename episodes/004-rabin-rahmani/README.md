@@ -23,8 +23,8 @@ The system is designed to improve the quality of context and questions. It does 
 - [Episode page](https://betterness.ai/augmentedwellness/004-rabin-rahmani)
 - [Watch on YouTube](https://youtu.be/VwT8qON9x1Y)
 - [Listen on Transistor](https://share.transistor.fm/s/204300c6)
-- [Apple Podcasts](https://podcasts.apple.com/podcast/id1896935053)
-- [Spotify](https://open.spotify.com/show/033zAkDQc1NpADnqP4OFzh)
+- [Apple Podcasts](https://podcasts.apple.com/us/podcast/dr-rabin-rahmani-from-wartime-iran-to-brooklyn-and/id1896935053?i=1000777799367)
+- [Spotify](https://open.spotify.com/episode/0WLfczAnkncrxO67GZndC2)
 - [Amazon Music](https://music.amazon.com/podcasts/d3fcfba2-fded-460f-b818-1937d04d47db/augmented-wellness)
 
 ## What is included
