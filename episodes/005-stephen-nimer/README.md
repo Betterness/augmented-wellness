@@ -7,6 +7,10 @@ partner, how the Dolphins Cancer Challenge helped Sylvester grow, where AI is
 already changing drug discovery, and why a doctor's first responsibility is
 to listen.
 
+Watch the full conversation on [YouTube](https://youtu.be/ctFSn2-4hL4),
+listen through the [podcast feed](https://share.transistor.fm/s/2b5debd5), or
+explore the complete [episode page](https://betterness.ai/augmentedwellness/005-stephen-nimer).
+
 ## Build With The Episode
 
 The **DCC Research Navigator** turns the public Faces of the DCC research list
