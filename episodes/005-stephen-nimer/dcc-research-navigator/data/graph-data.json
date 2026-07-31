@@ -1,0 +1,1424 @@
+{
+  "generated_at": "2026-06-19T01:07:31.024Z",
+  "source": "https://facesofthedcc.com/ Research Funding List",
+  "caveat": "Educational research map and source index. It is not medical advice and does not claim DCC funded a specific publication or caused a clinical outcome.",
+  "nodes": [
+    {
+      "id": "dcc",
+      "label": "Dolphins Cancer Challenge",
+      "type": "program"
+    },
+    {
+      "id": "sylvester",
+      "label": "Sylvester Comprehensive Cancer Center",
+      "type": "institution"
+    },
+    {
+      "id": "taghrid-asfar-md",
+      "label": "Taghrid Asfar, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-cancer-prevention-and-disparities",
+      "label": "cancer prevention and disparities",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-prevention-and-population-health",
+      "label": "prevention and population health",
+      "type": "research_theme"
+    },
+    {
+      "id": "impact-reduce-cancer-risk-or-catch-disease-earlier",
+      "label": "reduce cancer risk or catch disease earlier",
+      "type": "possible_impact"
+    },
+    {
+      "id": "julio-c-barredo-md",
+      "label": "Julio C. Barredo, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-blood-cancers",
+      "label": "blood cancers",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-tumor-metabolism-and-microenvironment",
+      "label": "tumor metabolism and microenvironment",
+      "type": "research_theme"
+    },
+    {
+      "id": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "label": "improve understanding of how cancer begins or progresses",
+      "type": "possible_impact"
+    },
+    {
+      "id": "barbara-bedogni-phd",
+      "label": "Barbara Bedogni, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-melanoma-and-skin-cancer",
+      "label": "melanoma and skin cancer",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-immunology-and-immunotherapy",
+      "label": "immunology and immunotherapy",
+      "type": "research_theme"
+    },
+    {
+      "id": "karoline-briegel-phd",
+      "label": "Karoline Briegel, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-breast-cancer",
+      "label": "breast cancer",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-epigenetics-and-gene-regulation",
+      "label": "epigenetics and gene regulation",
+      "type": "research_theme"
+    },
+    {
+      "id": "theme-cancer-stem-cells",
+      "label": "cancer stem cells",
+      "type": "research_theme"
+    },
+    {
+      "id": "impact-create-or-test-better-treatments",
+      "label": "create or test better treatments",
+      "type": "possible_impact"
+    },
+    {
+      "id": "impact-overcome-resistance-or-metastatic-progression",
+      "label": "overcome resistance or metastatic progression",
+      "type": "possible_impact"
+    },
+    {
+      "id": "luisa-cimmino-phd",
+      "label": "Luisa Cimmino, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-cross-cancer-biology",
+      "label": "cross-cancer biology",
+      "type": "cancer_area"
+    },
+    {
+      "id": "macarena-de-la-fuente-md",
+      "label": "Macarena de la Fuente, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-brain-tumors",
+      "label": "brain tumors",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-clinical-trials",
+      "label": "clinical trials",
+      "type": "research_theme"
+    },
+    {
+      "id": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "label": "Gilberto de Lima Lopes Junior, M.D., M.B.A., FAMS",
+      "type": "researcher"
+    },
+    {
+      "id": "area-lung-cancer",
+      "label": "lung cancer",
+      "type": "cancer_area"
+    },
+    {
+      "id": "impact-improve-access-equity-or-outcomes",
+      "label": "improve access, equity, or outcomes",
+      "type": "possible_impact"
+    },
+    {
+      "id": "shanta-dhar-phd",
+      "label": "Shanta Dhar, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "theme-targeted-drug-delivery",
+      "label": "targeted drug delivery",
+      "type": "research_theme"
+    },
+    {
+      "id": "nesrin-dogan-phd",
+      "label": "Nesrin Dogan, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-radiation-oncology",
+      "label": "radiation oncology",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-precision-radiation",
+      "label": "precision radiation",
+      "type": "research_theme"
+    },
+    {
+      "id": "impact-make-treatment-more-precise-with-fewer-harms",
+      "label": "make treatment more precise with fewer harms",
+      "type": "possible_impact"
+    },
+    {
+      "id": "wael-el-rifai-md-phd",
+      "label": "Wael El-Rifai, M.D., Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-gastrointestinal-cancers",
+      "label": "gastrointestinal cancers",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-drug-resistance",
+      "label": "drug resistance",
+      "type": "research_theme"
+    },
+    {
+      "id": "maria-e-figueroa-md",
+      "label": "Maria E. Figueroa, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "sophia-george-phd",
+      "label": "Sophia George, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-hereditary-breast-and-ovarian-cancer",
+      "label": "hereditary breast and ovarian cancer",
+      "type": "cancer_area"
+    },
+    {
+      "id": "erin-kobetz-phd-mph",
+      "label": "Erin Kobetz, Ph.D., M.P.H.",
+      "type": "researcher"
+    },
+    {
+      "id": "stephen-lee-phd",
+      "label": "Stephen Lee, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "izidore-lossos-md",
+      "label": "Izidore Lossos, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-lymphoma",
+      "label": "lymphoma",
+      "type": "cancer_area"
+    },
+    {
+      "id": "theme-translational-research",
+      "label": "translational research",
+      "type": "research_theme"
+    },
+    {
+      "id": "jose-lutzky-md-facp",
+      "label": "Jose Lutzky, M.D., FACP",
+      "type": "researcher"
+    },
+    {
+      "id": "jaime-merchan-md-mmsc",
+      "label": "Jaime Merchan, M.D., MMSc",
+      "type": "researcher"
+    },
+    {
+      "id": "nipun-b-merchant-md",
+      "label": "Nipun B. Merchant, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "ivaylo-mihaylov-phd-dabr",
+      "label": "Ivaylo Mihaylov, Ph.D., DABR",
+      "type": "researcher"
+    },
+    {
+      "id": "lluis-morey-phd",
+      "label": "Lluis Morey, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "allan-pollack-md-phd",
+      "label": "Allan Pollack, M.D., Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-prostate-cancer",
+      "label": "prostate cancer",
+      "type": "cancer_area"
+    },
+    {
+      "id": "priyamvada-rai-phd",
+      "label": "Priyamvada Rai, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "theme-dna-repair-and-genome-stability",
+      "label": "DNA repair and genome stability",
+      "type": "research_theme"
+    },
+    {
+      "id": "joseph-d-rosenblatt-md",
+      "label": "Joseph D. Rosenblatt, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "jonathan-h-schatz-md",
+      "label": "Jonathan H. Schatz, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "ramin-shiekhattar-phd",
+      "label": "Ramin Shiekhattar, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "jonathan-c-trent-md-phd",
+      "label": "Jonathan C. Trent, M.D., Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-sarcoma",
+      "label": "sarcoma",
+      "type": "cancer_area"
+    },
+    {
+      "id": "ramiro-e-verdun-phd",
+      "label": "Ramiro E. Verdun, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "justin-m-watts-md",
+      "label": "Justin M. Watts, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "scott-welford-phd",
+      "label": "Scott Welford, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "alexander-zaika-phd",
+      "label": "Alexander Zaika, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "area-head-and-neck-cancer",
+      "label": "head and neck cancer",
+      "type": "cancer_area"
+    },
+    {
+      "id": "nagi-g-ayad-ph-d",
+      "label": "Nagi G. Ayad, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "marzenna-blonska-ph-d",
+      "label": "Marzenna Blonska, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "krishna-komanduri-m-d",
+      "label": "Krishna Komanduri, M.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "david-j-robbins-ph-d",
+      "label": "David J. Robbins, Ph.D.",
+      "type": "researcher"
+    },
+    {
+      "id": "michael-a-samuels-m-d-facr",
+      "label": "Michael A. Samuels, M.D., FACR",
+      "type": "researcher"
+    }
+  ],
+  "edges": [
+    {
+      "from": "dcc",
+      "to": "sylvester",
+      "type": "supports"
+    },
+    {
+      "from": "dcc",
+      "to": "taghrid-asfar-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "taghrid-asfar-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "taghrid-asfar-md",
+      "to": "area-cancer-prevention-and-disparities",
+      "type": "works_on"
+    },
+    {
+      "from": "taghrid-asfar-md",
+      "to": "theme-prevention-and-population-health",
+      "type": "studies"
+    },
+    {
+      "from": "taghrid-asfar-md",
+      "to": "impact-reduce-cancer-risk-or-catch-disease-earlier",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "julio-c-barredo-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "julio-c-barredo-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "julio-c-barredo-md",
+      "to": "area-blood-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "julio-c-barredo-md",
+      "to": "theme-tumor-metabolism-and-microenvironment",
+      "type": "studies"
+    },
+    {
+      "from": "julio-c-barredo-md",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "barbara-bedogni-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "barbara-bedogni-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "barbara-bedogni-phd",
+      "to": "area-melanoma-and-skin-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "barbara-bedogni-phd",
+      "to": "theme-tumor-metabolism-and-microenvironment",
+      "type": "studies"
+    },
+    {
+      "from": "barbara-bedogni-phd",
+      "to": "theme-immunology-and-immunotherapy",
+      "type": "studies"
+    },
+    {
+      "from": "barbara-bedogni-phd",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "karoline-briegel-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "karoline-briegel-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "karoline-briegel-phd",
+      "to": "area-breast-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "karoline-briegel-phd",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "karoline-briegel-phd",
+      "to": "theme-cancer-stem-cells",
+      "type": "studies"
+    },
+    {
+      "from": "karoline-briegel-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "karoline-briegel-phd",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "luisa-cimmino-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "luisa-cimmino-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "luisa-cimmino-phd",
+      "to": "area-cross-cancer-biology",
+      "type": "works_on"
+    },
+    {
+      "from": "luisa-cimmino-phd",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "luisa-cimmino-phd",
+      "to": "theme-cancer-stem-cells",
+      "type": "studies"
+    },
+    {
+      "from": "luisa-cimmino-phd",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "macarena-de-la-fuente-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "macarena-de-la-fuente-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "macarena-de-la-fuente-md",
+      "to": "area-brain-tumors",
+      "type": "works_on"
+    },
+    {
+      "from": "macarena-de-la-fuente-md",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "macarena-de-la-fuente-md",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "macarena-de-la-fuente-md",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "area-lung-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "area-cancer-prevention-and-disparities",
+      "type": "works_on"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "theme-prevention-and-population-health",
+      "type": "studies"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "impact-reduce-cancer-risk-or-catch-disease-earlier",
+      "type": "may_impact"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "gilberto-de-lima-lopes-junior-md-mba-fams",
+      "to": "impact-improve-access-equity-or-outcomes",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "shanta-dhar-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "shanta-dhar-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "shanta-dhar-phd",
+      "to": "area-cross-cancer-biology",
+      "type": "works_on"
+    },
+    {
+      "from": "shanta-dhar-phd",
+      "to": "theme-targeted-drug-delivery",
+      "type": "studies"
+    },
+    {
+      "from": "shanta-dhar-phd",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "nesrin-dogan-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "nesrin-dogan-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "nesrin-dogan-phd",
+      "to": "area-radiation-oncology",
+      "type": "works_on"
+    },
+    {
+      "from": "nesrin-dogan-phd",
+      "to": "theme-precision-radiation",
+      "type": "studies"
+    },
+    {
+      "from": "nesrin-dogan-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "nesrin-dogan-phd",
+      "to": "impact-make-treatment-more-precise-with-fewer-harms",
+      "type": "may_impact"
+    },
+    {
+      "from": "nesrin-dogan-phd",
+      "to": "impact-improve-access-equity-or-outcomes",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "wael-el-rifai-md-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "wael-el-rifai-md-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "wael-el-rifai-md-phd",
+      "to": "area-gastrointestinal-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "wael-el-rifai-md-phd",
+      "to": "theme-drug-resistance",
+      "type": "studies"
+    },
+    {
+      "from": "wael-el-rifai-md-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "wael-el-rifai-md-phd",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "maria-e-figueroa-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "maria-e-figueroa-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "maria-e-figueroa-md",
+      "to": "area-blood-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "maria-e-figueroa-md",
+      "to": "area-cancer-prevention-and-disparities",
+      "type": "works_on"
+    },
+    {
+      "from": "maria-e-figueroa-md",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "maria-e-figueroa-md",
+      "to": "theme-prevention-and-population-health",
+      "type": "studies"
+    },
+    {
+      "from": "maria-e-figueroa-md",
+      "to": "impact-reduce-cancer-risk-or-catch-disease-earlier",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "sophia-george-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "sophia-george-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "sophia-george-phd",
+      "to": "area-breast-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "sophia-george-phd",
+      "to": "area-hereditary-breast-and-ovarian-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "sophia-george-phd",
+      "to": "area-cancer-prevention-and-disparities",
+      "type": "works_on"
+    },
+    {
+      "from": "sophia-george-phd",
+      "to": "theme-prevention-and-population-health",
+      "type": "studies"
+    },
+    {
+      "from": "sophia-george-phd",
+      "to": "impact-reduce-cancer-risk-or-catch-disease-earlier",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "erin-kobetz-phd-mph",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "erin-kobetz-phd-mph",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "erin-kobetz-phd-mph",
+      "to": "area-cancer-prevention-and-disparities",
+      "type": "works_on"
+    },
+    {
+      "from": "erin-kobetz-phd-mph",
+      "to": "theme-prevention-and-population-health",
+      "type": "studies"
+    },
+    {
+      "from": "erin-kobetz-phd-mph",
+      "to": "impact-reduce-cancer-risk-or-catch-disease-earlier",
+      "type": "may_impact"
+    },
+    {
+      "from": "erin-kobetz-phd-mph",
+      "to": "impact-improve-access-equity-or-outcomes",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "stephen-lee-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "stephen-lee-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "stephen-lee-phd",
+      "to": "area-cross-cancer-biology",
+      "type": "works_on"
+    },
+    {
+      "from": "stephen-lee-phd",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "stephen-lee-phd",
+      "to": "theme-tumor-metabolism-and-microenvironment",
+      "type": "studies"
+    },
+    {
+      "from": "stephen-lee-phd",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "izidore-lossos-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "izidore-lossos-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "izidore-lossos-md",
+      "to": "area-blood-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "izidore-lossos-md",
+      "to": "area-lymphoma",
+      "type": "works_on"
+    },
+    {
+      "from": "izidore-lossos-md",
+      "to": "theme-translational-research",
+      "type": "studies"
+    },
+    {
+      "from": "izidore-lossos-md",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "jose-lutzky-md-facp",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "jose-lutzky-md-facp",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "jose-lutzky-md-facp",
+      "to": "area-melanoma-and-skin-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "jose-lutzky-md-facp",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "jose-lutzky-md-facp",
+      "to": "theme-immunology-and-immunotherapy",
+      "type": "studies"
+    },
+    {
+      "from": "jose-lutzky-md-facp",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "jaime-merchan-md-mmsc",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "area-breast-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "area-gastrointestinal-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "theme-drug-resistance",
+      "type": "studies"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "jaime-merchan-md-mmsc",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "nipun-b-merchant-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "nipun-b-merchant-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "nipun-b-merchant-md",
+      "to": "area-gastrointestinal-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "nipun-b-merchant-md",
+      "to": "theme-tumor-metabolism-and-microenvironment",
+      "type": "studies"
+    },
+    {
+      "from": "nipun-b-merchant-md",
+      "to": "theme-immunology-and-immunotherapy",
+      "type": "studies"
+    },
+    {
+      "from": "nipun-b-merchant-md",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "nipun-b-merchant-md",
+      "to": "impact-improve-access-equity-or-outcomes",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "ivaylo-mihaylov-phd-dabr",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "ivaylo-mihaylov-phd-dabr",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "ivaylo-mihaylov-phd-dabr",
+      "to": "area-radiation-oncology",
+      "type": "works_on"
+    },
+    {
+      "from": "ivaylo-mihaylov-phd-dabr",
+      "to": "theme-precision-radiation",
+      "type": "studies"
+    },
+    {
+      "from": "ivaylo-mihaylov-phd-dabr",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "ivaylo-mihaylov-phd-dabr",
+      "to": "impact-make-treatment-more-precise-with-fewer-harms",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "lluis-morey-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "lluis-morey-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "lluis-morey-phd",
+      "to": "area-breast-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "lluis-morey-phd",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "lluis-morey-phd",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "allan-pollack-md-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "allan-pollack-md-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "allan-pollack-md-phd",
+      "to": "area-prostate-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "allan-pollack-md-phd",
+      "to": "area-radiation-oncology",
+      "type": "works_on"
+    },
+    {
+      "from": "allan-pollack-md-phd",
+      "to": "theme-precision-radiation",
+      "type": "studies"
+    },
+    {
+      "from": "allan-pollack-md-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "allan-pollack-md-phd",
+      "to": "impact-make-treatment-more-precise-with-fewer-harms",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "priyamvada-rai-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "priyamvada-rai-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "priyamvada-rai-phd",
+      "to": "area-radiation-oncology",
+      "type": "works_on"
+    },
+    {
+      "from": "priyamvada-rai-phd",
+      "to": "theme-precision-radiation",
+      "type": "studies"
+    },
+    {
+      "from": "priyamvada-rai-phd",
+      "to": "theme-dna-repair-and-genome-stability",
+      "type": "studies"
+    },
+    {
+      "from": "priyamvada-rai-phd",
+      "to": "impact-make-treatment-more-precise-with-fewer-harms",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "joseph-d-rosenblatt-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "joseph-d-rosenblatt-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "joseph-d-rosenblatt-md",
+      "to": "area-cross-cancer-biology",
+      "type": "works_on"
+    },
+    {
+      "from": "joseph-d-rosenblatt-md",
+      "to": "theme-immunology-and-immunotherapy",
+      "type": "studies"
+    },
+    {
+      "from": "joseph-d-rosenblatt-md",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "jonathan-h-schatz-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "jonathan-h-schatz-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "jonathan-h-schatz-md",
+      "to": "area-lymphoma",
+      "type": "works_on"
+    },
+    {
+      "from": "jonathan-h-schatz-md",
+      "to": "theme-drug-resistance",
+      "type": "studies"
+    },
+    {
+      "from": "jonathan-h-schatz-md",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "jonathan-h-schatz-md",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "ramin-shiekhattar-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "ramin-shiekhattar-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "ramin-shiekhattar-phd",
+      "to": "area-melanoma-and-skin-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "ramin-shiekhattar-phd",
+      "to": "area-gastrointestinal-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "ramin-shiekhattar-phd",
+      "to": "theme-epigenetics-and-gene-regulation",
+      "type": "studies"
+    },
+    {
+      "from": "ramin-shiekhattar-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "jonathan-c-trent-md-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "jonathan-c-trent-md-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "jonathan-c-trent-md-phd",
+      "to": "area-sarcoma",
+      "type": "works_on"
+    },
+    {
+      "from": "jonathan-c-trent-md-phd",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "jonathan-c-trent-md-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "ramiro-e-verdun-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "ramiro-e-verdun-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "ramiro-e-verdun-phd",
+      "to": "area-cross-cancer-biology",
+      "type": "works_on"
+    },
+    {
+      "from": "ramiro-e-verdun-phd",
+      "to": "theme-dna-repair-and-genome-stability",
+      "type": "studies"
+    },
+    {
+      "from": "ramiro-e-verdun-phd",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "justin-m-watts-md",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "justin-m-watts-md",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "justin-m-watts-md",
+      "to": "area-blood-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "justin-m-watts-md",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "justin-m-watts-md",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "scott-welford-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "scott-welford-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "scott-welford-phd",
+      "to": "area-radiation-oncology",
+      "type": "works_on"
+    },
+    {
+      "from": "scott-welford-phd",
+      "to": "theme-tumor-metabolism-and-microenvironment",
+      "type": "studies"
+    },
+    {
+      "from": "scott-welford-phd",
+      "to": "theme-precision-radiation",
+      "type": "studies"
+    },
+    {
+      "from": "scott-welford-phd",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "scott-welford-phd",
+      "to": "impact-make-treatment-more-precise-with-fewer-harms",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "alexander-zaika-phd",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "alexander-zaika-phd",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "alexander-zaika-phd",
+      "to": "area-gastrointestinal-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "alexander-zaika-phd",
+      "to": "theme-translational-research",
+      "type": "studies"
+    },
+    {
+      "from": "alexander-zaika-phd",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "nagi-g-ayad-ph-d",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "nagi-g-ayad-ph-d",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "nagi-g-ayad-ph-d",
+      "to": "area-brain-tumors",
+      "type": "works_on"
+    },
+    {
+      "from": "nagi-g-ayad-ph-d",
+      "to": "theme-translational-research",
+      "type": "studies"
+    },
+    {
+      "from": "nagi-g-ayad-ph-d",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "marzenna-blonska-ph-d",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "marzenna-blonska-ph-d",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "marzenna-blonska-ph-d",
+      "to": "area-lymphoma",
+      "type": "works_on"
+    },
+    {
+      "from": "marzenna-blonska-ph-d",
+      "to": "theme-drug-resistance",
+      "type": "studies"
+    },
+    {
+      "from": "marzenna-blonska-ph-d",
+      "to": "impact-overcome-resistance-or-metastatic-progression",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "krishna-komanduri-m-d",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "krishna-komanduri-m-d",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "krishna-komanduri-m-d",
+      "to": "area-blood-cancers",
+      "type": "works_on"
+    },
+    {
+      "from": "krishna-komanduri-m-d",
+      "to": "theme-immunology-and-immunotherapy",
+      "type": "studies"
+    },
+    {
+      "from": "krishna-komanduri-m-d",
+      "to": "theme-clinical-trials",
+      "type": "studies"
+    },
+    {
+      "from": "krishna-komanduri-m-d",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "david-j-robbins-ph-d",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "david-j-robbins-ph-d",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "david-j-robbins-ph-d",
+      "to": "area-cross-cancer-biology",
+      "type": "works_on"
+    },
+    {
+      "from": "david-j-robbins-ph-d",
+      "to": "theme-translational-research",
+      "type": "studies"
+    },
+    {
+      "from": "david-j-robbins-ph-d",
+      "to": "impact-improve-understanding-of-how-cancer-begins-or-progresses",
+      "type": "may_impact"
+    },
+    {
+      "from": "david-j-robbins-ph-d",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "dcc",
+      "to": "michael-a-samuels-m-d-facr",
+      "type": "publicly_highlights"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "sylvester",
+      "type": "affiliated_with"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "area-head-and-neck-cancer",
+      "type": "works_on"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "area-radiation-oncology",
+      "type": "works_on"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "theme-precision-radiation",
+      "type": "studies"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "theme-immunology-and-immunotherapy",
+      "type": "studies"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "impact-create-or-test-better-treatments",
+      "type": "may_impact"
+    },
+    {
+      "from": "michael-a-samuels-m-d-facr",
+      "to": "impact-make-treatment-more-precise-with-fewer-harms",
+      "type": "may_impact"
+    }
+  ]
+}
