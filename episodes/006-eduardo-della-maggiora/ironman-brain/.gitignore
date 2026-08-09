@@ -1,0 +1,18 @@
+# This directory becomes personal as soon as the athlete starts using it.
+# Keep generated reviews, private notes, exports, and local Obsidian state out of git.
+.obsidian/
+.trash/
+.env
+.env.*
+private/
+generated/
+exports/
+daily/
+weekly/
+races/
+*.csv
+*.fit
+*.gpx
+*.tcx
+*.json
+*.pdf
